@@ -3,12 +3,9 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
-/*header {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline; display:block}*/
 body{ line:center; 
  font-family: Helvetica, Arial, sans-serif;
     color: #fff
-
-
 }
 .back{
 
@@ -20,13 +17,10 @@ body{ line:center;
 }
 
 .wrapper {
-   
-    margin-top: 150px;
-   
-    
-}
+       margin-top: 150px;
+ }
 .content {
-    max-width: 680px;
+    max-width: 620px;
     max-height:440px;
 
     margin: 0 auto;
@@ -37,15 +31,6 @@ body{ line:center;
     -webkit-animation-duration: 2s;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
-    /*-webkit-animation-duration:.5s;
-  animation-duration:.5s;
-  -webkit-animation-timing-function:ease-in-out;
-  animation-timing-function:ease-in-out;
-  -webkit-animation-fill-mode:both;animation-fill-mode:both;
-  -webkit-animation-name:a;
-  animation-name:a;
-  -webkit-animation-delay:.5s;
-  animation-delay:.5s*/
 }
 @keyframes opacity {
     from {
@@ -57,14 +42,14 @@ body{ line:center;
 }
 .logo{
   text-align: left;  
-    margin-bottom: 20px;}
+    margin-bottom: 24px;}
 .logo__image {
     margin-bottom: 18px;
 }
 .logo__title {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
-.logo__title__item {
+.logo__title-item {
 font-size: 24px;
     line-height: 36px;
     color: #ffffff;
@@ -82,41 +67,35 @@ p {
     margin-right: 12px;
     vertical-align: middle;
 }
-@media (max-width: 100px;) {
-    .form__group {
-        display: block;
-        width: 100px;
-        max-width: none;
-    }
-}
-.form__group__label {
+
+.form__group-label {
     display: block;
     padding-bottom: 3px;
     font-size:16px;
     line-height: 24px;
 }
-.form__group__input {
-    width: 178px;
+.form__group-input {
+    width: 180px;
     background: transparent;
     border: 1px solid #fff;
     border-radius: 4px;
-    padding: 8px 9px;
+    padding: 12px 12px;
 }
-.form__group__message {
+.form__group-message {
     opacity: 0;
     visibility: hidden;
-    padding-top: 3px;
+    padding-top: 6px;
     color: #c33;
-    font-size: 17px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 24px;
 }
-.form__group_for_button {
-    padding-top: 7px;
+.form__group-for_button {
+    padding-bottom: 3px;
 }
-.form__group__button {
+.form__group-button {
      border: 1px solid #fff;
-    border-radius: 4px;
-    padding: 5px 12px;
+    border-radius: 6px;
+    padding: 9px 12px;
 
     -webkit-transition-property: border-color, background, fill;
     transition-property: border-color, background, fill;
@@ -127,42 +106,40 @@ p {
     background: transparent;
    
 }
-.form__group__button:focus,
-.form__group__button:hover {
+.form__group-button:focus,
+.form__group-button:hover {
     background: #70c470
 }
-.form__group_button p {
-    font-size: 16px;
+.form__group-button p {
+    font-size: 18px;
     line-height: 24px;
 }
-.form__group__button_disabled,
-.form__group__button {
-    border-color: #a9a9a9;
-    color: #a9a9a9;
-}
-.form__group__button_disabled:focus,
-.form__group__button_disabled:hover,
-.form__group__button:focus,
-.form__group__button:hover {
-    background: transparent;
-}
 
-.form__group__input {
+
+.form__group-error .form__group-input {
     border-color: #c33;
 }
-.form__group__message {
+.form__group-error .form__group-message {
     opacity: 1;
     visibility: visible;
 }
+.loader {  
+}
+.loader:before {
+  }
+.circular {
+    }
+.path {
+   }
 
 .links {
-    margin-bottom: .75px
+    margin-bottom: 18px
 }
 .links__item {
     display: inline-block;
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
     background-size: cover
 }
 .link__vk {
@@ -175,6 +152,6 @@ p {
     margin-top: 84px
 }
 .footer__text {
-    font-size: 14px;
-    line-height: 17px
+    font-size: 12px;
+    line-height: 16px
 }

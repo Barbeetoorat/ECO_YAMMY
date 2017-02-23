@@ -1,78 +1,97 @@
-<!DOCTYPE html>
-<html lang="ru-RU">
+OCTYPE html>
+<html lang="ru-RU"> 
+    <head>
+        <title>ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России</title>
+        <meta name="description" content="В интернет-магазине можно заказать натуральные ореховые пасты и сахарозаменители с доставкой по всей России">
 
-<head>
-    <title>ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России</title>
-    <meta name="description" content="В интернет-магазине можно заказать натуральные ореховые пасты и сахарозаменители с доставкой по всей России">
+        <meta property="og:title" content="ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России" />
+        <meta property="og:description" content="В интернет-магазине можно заказать натуральные ореховые пасты и сахарозаменители с доставкой по всей России" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://ecoyammy.ru" />
+        <meta property="og:image" content="http://ecoyammy.ru/assets/img/og.jpg" />
 
-    <meta property="og:title" content="ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России" />
-    <meta property="og:description" content="В интернет-магазине можно заказать натуральные ореховые пасты и сахарозаменители с доставкой по всей России" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://ecoyammy.ru" />
-    <meta property="og:image" content="http://ecoyammy.ru/assets/img/og.jpg" />
-
-    <!-- Your included styles -->
-    <link rel="stylesheet" href="assets/styles/normalize.css">
-    <link rel="stylesheet" href="assets/styles/reset.css">
-    <link rel="stylesheet" href="assets/styles/main.css">
-</head>
+        <!-- Your included styles -->
+        <link rel="stylesheet" href="assets/styles/normalize.css">
+        <link rel="stylesheet" href="assets/styles/reset.css">
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    </head>
 
 <body class="back">
     <div class="wrapper">
         <div class="content">
             <header class="logo">
                 <img src="assets/images/logo__main.svg" class="logo__image" width="250" height="85" alt="ECO.YAMMY">
-                <div class="logo__title">
-                    <p class="logo__title__item">Оставьте электронную почту и мы расскажем вам о&nbsp;запуске нового сайта</p>
-                </div>
+                <div class="logo__title"><p class="logo__title-item">Оставьте электронную почту и мы расскажем вам о&nbsp;запуске нового сайта</p></div>
             </header>
 
-            <form class="form" name="signup">
-                <div class="form__group">
-                    <label class="form__group__label" for="f-name">Представьтесь</label>
-                    <input class="form__group__input" name="f-name" placeholder="Иванов Иван Иванович" type="text" required>
-                    <p class="form__group__message">Введите ваше имя</p>
+            <form action="javascript:void(null);" class="form" name="signup">
+                <div class="form__group js-name">
+                    <label class="form__group-label" for="f-name">Представьтесь</label>
+                    <input class="form__group-input" id="input_name" name="f-name" placeholder="Иванов Иван Иванович" type="text" required
+                    >
+                    <p class="form__group-message">Введите ваше имя</p>
                 </div>
 
-                <div class="form__group">
-                    <label class="form__group__label" for="f-email">E-mail</label>
-                    <input class="form__group__input" name="f-email" placeholder="ivanov@gmail.com" type="email" required>
-                    <p class="form__group__message">Введите ваш e-mail</p>
+                <div class="form__group js-email">
+                    <label class="form__group-label" for="f-email">E-mail</label>
+                    <input class="form__group-input" id="input_email" name="f-email" placeholder="ivanov@gmail.com" type="email" >
+                    <p class="form__group-message">Введите ваш e-mail</p>
                 </div>
 
-                <div class="form__group form__group_for_button">
-                    <button class="form__group__button">
-                        <p>Отправить</p>
-                    </button>
-                    <div class="form__group__loader loader">
-
+                <div class="form__group form__group-for_button">
+                    <button class="form__group-button" id="button" onclick="func()"><p>Отправить</p></button>
+                    <div class="form__group-loader loader">
+                        <svg class="circular" viewBox="25 25 50 50">
+                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+                        </svg>
                     </div>
                 </div>
 
-
+                <div class="form__result">
+                    <p class="form__result-text">Все готово, подписывайтесь на канал, ставьте лайк, всем пока</p>
+                </div>          
             </form>
+           
             <footer class="footer">
                 <ul class="footer__links links">
                     <a href="https://www.instagram.com/eco.yammy/" target="_blank">
-                        <li class="links__item link__instagram"></li>
-                    </a>
-
+                    <li class="links__item link__instagram"></li>
+                                </a>
+                                
 
                     <a href="https://vk.com/eco.yammy" target="_blank">
-                        <li class="links__item link__vk"></li>
-                    </a>
+                    <li class="links__item link__vk"></li>
+                                </a>
                 </ul>
 
                 <div class="footer__info">
                     <p class="footer__text">ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России.</p>
                 </div>
-
-            </footer>
+            
+            </footer>              
         </div>
-    </div>
+      </div>
 
-    <script>
-    </script>
-</body>
-
+        <script  language="JavaScript">
+     function isEmail() {
+    var str = document.getElementById("input_email").value;
+    var status = document.getElementById("status");
+    var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+    if (re.test(str)) status.innerHTML = document.getElementById("form__result");
+      else status.innerHTML =  document.getElementsByClassName("form__group-error");
+    if(isEmpty(str)) status.innerHTML = "Поле пустое";
+   }
+   function isEmpty(str){
+    return (str == null) || (str.length == 0);
+   }
+        return false;
+    });
+});
+_______________
+func(){
+ if (getElementById('input_email').value().length) {// делать ajax запрос} 
+    else { group.classList.remove("form__group-error"); }
+        </script>      
+    </body>
 </html>

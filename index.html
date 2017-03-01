@@ -1,4 +1,4 @@
-OCTYPE html>
+<!DOCTYPE html>
 <html lang="ru-RU"> 
     <head>
         <title>ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России</title>
@@ -14,7 +14,13 @@ OCTYPE html>
         <link rel="stylesheet" href="assets/styles/normalize.css">
         <link rel="stylesheet" href="assets/styles/reset.css">
         <link rel="stylesheet" href="assets/styles/main.css">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <script type="text/javascript" src="assets/js/jquery1.10.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.form.validation.js"></script>
+        <script type="text/javascript" src="assets/js/site.js"></script>
+
+
     </head>
 
 <body class="back">
@@ -22,10 +28,10 @@ OCTYPE html>
         <div class="content">
             <header class="logo">
                 <img src="assets/images/logo__main.svg" class="logo__image" width="250" height="85" alt="ECO.YAMMY">
-                <div class="logo__title"><p class="logo__title-item">Оставьте электронную почту и мы расскажем вам о&nbsp;запуске нового сайта</p></div>
+                <div class="logo__title"><p class="logыo__title-item">Оставьте электронную почту и мы расскажем вам о&nbsp;запуске нового сайта</p></div>
             </header>
 
-            <form action="javascript:void(null);" class="form" name="signup">
+            <form action="javascript:void(0);" id="form" class="form" name="signup" onsubmit="ajax()" method="post" > 
                 <div class="form__group js-name">
                     <label class="form__group-label" for="f-name">Представьтесь</label>
                     <input class="form__group-input" id="input_name" name="f-name" placeholder="Иванов Иван Иванович" type="text" required
@@ -47,7 +53,10 @@ OCTYPE html>
                         </svg>
                     </div>
                 </div>
-         
+
+                <div class="form__result">
+                    <p class="form__result-text">Все готово, подписывайтесь на канал, ставьте лайк, всем пока</p>
+                </div>          
             </form>
            
             <footer class="footer">
@@ -71,24 +80,7 @@ OCTYPE html>
       </div>
 
         <script  language="JavaScript">
-     function isEmail() {
-    var str = document.getElementById("input_email").value;
-    var status = document.getElementById("status");
-    var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-    if (re.test(str)) status.innerHTML = document.getElementById("form__result");
-      else status.innerHTML =  document.getElementsByClassName("form__group-error");
-    if(isEmpty(str)) status.innerHTML = "Поле пустое";
-   }
-   function isEmpty(str){
-    return (str == null) || (str.length == 0);
-   }
-        return false;
-    });
-});
-_______________
-func(){
- if (getElementById('input_email').value().length) {// делать ajax запрос} 
-    else { group.classList.remove("form__group-error"); }
+     
         </script>      
     </body>
 </html>

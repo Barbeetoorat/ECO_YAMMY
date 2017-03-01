@@ -3,9 +3,12 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+/*header {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline; display:block}*/
 body{ line:center; 
  font-family: Helvetica, Arial, sans-serif;
     color: #fff
+
+
 }
 .back{
 
@@ -17,8 +20,11 @@ body{ line:center;
 }
 
 .wrapper {
-       margin-top: 150px;
- }
+   
+    margin-top: 150px;
+   
+    
+}
 .content {
     max-width: 620px;
     max-height:440px;
@@ -31,6 +37,15 @@ body{ line:center;
     -webkit-animation-duration: 2s;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
+    /*-webkit-animation-duration:.5s;
+  animation-duration:.5s;
+  -webkit-animation-timing-function:ease-in-out;
+  animation-timing-function:ease-in-out;
+  -webkit-animation-fill-mode:both;animation-fill-mode:both;
+  -webkit-animation-name:a;
+  animation-name:a;
+  -webkit-animation-delay:.5s;
+  animation-delay:.5s*/
 }
 @keyframes opacity {
     from {
@@ -86,7 +101,7 @@ p {
     visibility: hidden;
     padding-top: 6px;
     color: #c33;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
 }
 .form__group-for_button {
@@ -94,7 +109,7 @@ p {
 }
 .form__group-button {
      border: 1px solid #fff;
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 9px 12px;
 
     -webkit-transition-property: border-color, background, fill;
@@ -114,8 +129,85 @@ p {
     font-size: 18px;
     line-height: 24px;
 }
+.form__group-button_disabled,
+.form__loading .form__group-button {
+    border-color: #a9a9a9;
+    color: #a9a9a9;
+}
+.form__group-button_disabled:focus,
+.form__group-button_disabled:hover,
+.form_loading .form__group-button:focus,
+.form_loading .form__group-button:hover {
+    background: transparent;
+}
+
+@-webkit-keyframes loader {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes loader {
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    width: 35px;
+    height: 35px;
+    border: 6px solid #000;
+    border-left-color: #333;
+    border-bottom-color: #555;
+    border-right-color: transparent;
+    border-radius: 100%;
+    -webkit-animation: loader 0.5s infinite linear;
+    -moz-animation: loader 0.5s infinite linear;
+    animation: loader 0.5s infinite linear;
+}
 
 
+
+.loader:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+
+
+
+.form__result {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    margin-top: 24px;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+.form__result a {
+    -webkit-transition-property: border-bottom, border-color, background, color, fill;
+    transition-property: border-bottom, border-color, background, color, fill;
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-bottom: 1px solid #70c470
+}
+.form__result a:focus,
+.form__result a:hover {
+    -webkit-transition: none;
+    transition: none;
+    color: #70c470;
+}
 .form__group-error .form__group-input {
     border-color: #c33;
 }
@@ -123,14 +215,36 @@ p {
     opacity: 1;
     visibility: visible;
 }
-.loader {  
+.form_loading .form__group-loader {
+    visibility: visible!important;
 }
-.loader:before {
-  }
-.circular {
+.form_sucess .form__result {
+    opacity: 1;
+    max-height: 24px;
     }
+
+.circular {
+    -webkit-animation: b 2s linear infinite;
+    animation: b 2s linear infinite;
+    height: 100%;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    
+}
 .path {
-   }
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    -webkit-animation: c 1.5s ease-in-out infinite, d 6s ease-in-out infinite;
+    animation: c 1.5s ease-in-out infinite, d 6s ease-in-out infinite;
+    stroke-linecap: round;
+}
 
 .links {
     margin-bottom: 18px

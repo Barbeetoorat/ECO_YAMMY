@@ -3,7 +3,6 @@
     <head>
         <title>ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России</title>
         <meta name="description" content="В интернет-магазине можно заказать натуральные ореховые пасты и сахарозаменители с доставкой по всей России">
-
         <meta property="og:title" content="ECO.YAMMY — интернет-магазин полезых продуктов. Доставка по Томску и всей России" />
         <meta property="og:description" content="В интернет-магазине можно заказать натуральные ореховые пасты и сахарозаменители с доставкой по всей России" />
         <meta property="og:type" content="website" />
@@ -16,8 +15,8 @@
         <link rel="stylesheet" href="assets/styles/main.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <script type="text/javascript" src="assets/js/jquery1.10.min.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.form.validation.js"></script>
+        <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/dist/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/js/site.js"></script>
 
 
@@ -46,15 +45,14 @@
                 </div>
 
                 <div class="form__group form__group-for_button">
-                    <button class="form__group-button" id="button" onclick="func()"><p>Отправить</p></button>
-                    <div class="form__group-loader loader">
+                    <button class="form__group-button" id="button" onclick="ajax()"><p>Отправить</p></button>
+                </div>
+                    <div class="form__group loader" id="loader">
                         <svg class="circular" viewBox="25 25 50 50">
                             <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
                         </svg>
                     </div>
-                </div>
-
-                <div class="form__result">
+                <div class="form__result" id="result">
                     <p class="form__result-text">Все готово, подписывайтесь на канал, ставьте лайк, всем пока</p>
                 </div>          
             </form>
@@ -80,7 +78,6 @@
       </div>
 
         <script  language="JavaScript">
-     
-        </script>      
+            </script>      
     </body>
 </html>
